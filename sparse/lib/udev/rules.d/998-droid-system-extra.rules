@@ -1,0 +1,5 @@
+IMPORT{cmdline}="androidboot.boot_devices"
+ENV{ID_PART_ENTRY_SCHEME}=="gpt", ENV{ID_PART_ENTRY_NAME}=="?*", SYMLINK+="block/platform/$env{androidboot.boot_devices}/by-name/$env{ID_PART_ENTRY_NAME}"
+
+ENV{ID_PART_ENTRY_SCHEME}=="gpt", ENV{ID_PART_ENTRY_NAME}=="?*", SYMLINK+="block/by-name/$env{ID_PART_ENTRY_NAME}"
+

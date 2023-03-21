@@ -1,0 +1,5 @@
+on early-boot
+    chmod 660 /sys/class/rfkill/rfkill1/state
+    chown bluetooth net_bt_admin /sys/class/rfkill/rfkill1/state
+    chmod 660 /sys/class/rfkill/rfkill1/type
+    chown bluetooth net_bt_admin /sys/class/rfkill/rfkill1/type

@@ -1,0 +1,19 @@
+CPUCHECK_STRING="Unisoc T606"
+
+# Because of flash-partition checks, 1 needs to be defined
+# Others can go with partition numbers
+PART_1="boot_a"
+PART_37="boot_b"
+PART_38="vendor_boot_a"
+PART_39="vendor_boot_b"
+PART_44="dtbo_a"
+PART_45="dtbo_b"
+
+PART_REAL_1="sda36"
+PART_REAL_37="sda37"
+PART_REAL_38="sda38"
+PART_REAL_39="sda39"
+PART_REAL_44="sda44"
+PART_REAL_45="sda45"
+
+PART_I="1 37 38 39 44 45"

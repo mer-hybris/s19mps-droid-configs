@@ -1,0 +1,5 @@
+/boot/hybris-boot.img
+/boot/dtbo.img
+/boot/vendor_boot.img
+/etc/hw-release
+droid-config-s19mps-out-of-image-files

@@ -1,0 +1,7 @@
+service gpu /system/bin/gpuservice_HYBRIS_DISABLED
+
+service vendor.sensors-hal-multihal /vendor/bin/hw/android.hardware.sensors-service.multihal_HYBRIS_DISABLED
+
+service vendor.sprd.hardware.vibrator-service /vendor/bin/hw/vendor.sprd.hardware.vibrator-service_HYBRIS_DISABLED
+
+service vendor.wifi_hal_legacy /vendor/bin/hw/android.hardware.wifi@1.0-service_HYBRIS_DISABLED
