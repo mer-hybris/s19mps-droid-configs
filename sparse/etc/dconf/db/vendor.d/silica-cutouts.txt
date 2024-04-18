@@ -1,2 +1,0 @@
-[desktop/sailfish/silica]
-cutouts = [[320, 0, 80, 43]]
