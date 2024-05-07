@@ -5,9 +5,8 @@
 %define vendor_pretty Reeder
 %define device_pretty S19 Max Pro S
 
-# Community HW adaptations need this
-#define community_adaptation 1
-
+Conflicts: appsupport-system < 11.0.0
+Conflicts: appsupport-system > 11.0.0
 %define android_version_major 13
 
 %define pixel_ratio 1.0
