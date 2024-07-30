@@ -44,3 +44,4 @@ service vendor.sprd.hardware.vibrator-service /vendor/bin/hw/vendor.sprd.hardwar
 
 service vendor.wifi_hal_legacy /vendor/bin/hw/android.hardware.wifi@1.0-service_HYBRIS_DISABLED
 
+service bpfloader /system/bin/bpfloader_HYBRIS_DISABLED
