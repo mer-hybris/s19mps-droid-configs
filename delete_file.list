@@ -1,6 +1,4 @@
 /boot/flash.sh
-/boot/flashing-README.txt
-/boot/extracting-README.txt
 /etc/acdbdata
 /etc/audio_platform_info.xml
 /etc/gps.conf
