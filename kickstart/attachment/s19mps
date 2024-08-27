@@ -1,5 +1,7 @@
 /boot/hybris-boot.img
 /boot/dtbo.img
 /boot/vendor_boot.img
+/boot/lk.bin
+/boot/logo.bin
 /etc/hw-release
 droid-config-s19mps-out-of-image-files
