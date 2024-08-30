@@ -6,6 +6,7 @@ Requires: droid-hal-s19mps-img-recovery
 Requires: droid-hal-s19mps-kernel-dtbo
 Requires: droid-hal-s19mps-tools
 Requires: droid-hal-s19mps-vendor_boot
+Requires: droid-hal-s19mps-img-bootloader
 
 # Hybris packages
 Requires: libhybris-libEGL
