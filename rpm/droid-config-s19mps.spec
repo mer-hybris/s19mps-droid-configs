@@ -5,8 +5,8 @@
 %define vendor_pretty Reeder
 %define device_pretty S19 Max Pro S
 
-Conflicts: appsupport-system < 11.0.0
-Conflicts: appsupport-system > 11.0.0
+Conflicts: appsupport-system < 13.0.0
+Conflicts: appsupport-system > 13.0.0
 %define android_version_major 13
 
 %define pixel_ratio 1.0
@@ -35,9 +35,6 @@ Obsoletes: yamuisplash-logo-default
 
 %define ofono_enable_plugins bluez5,hfp_ag_bluez5
 %define ofono_disable_plugins bluez4,dun_gw_bluez4,hfp_ag_bluez4,hfp_bluez4,dun_gw_bluez5,hfp_bluez5
-
-# Ignore requirements of included binaries
-%define __requires_exclude_from ^/opt/appsupport/vendor/lib.*/.*$
 
 Requires: droid-system-%{rpm_device}
 
