@@ -68,6 +68,39 @@ HOMESIZE=$IMGSIZE
 HOMEBLOCKS=$IMGBLOCKS
 HOMESECTORS=$IMGSECTORS
 
+echo "Create factory reset image..."
+
+pigz -7 -k root.img && md5sum -b root.img.gz > root.img.gz.md5&
+pigz -7 -k home.img && md5sum -b home.img.gz > home.img.gz.md5&
+wait
+
+F_ROOT_BLOCKS=$(stat -c '%b' root.img.gz)
+F_HOME_BLOCKS=$(stat -c '%b' home.img.gz)
+F_BLOCK_SIZE=$(stat -c '%B' root.img.gz)
+F_IMAGE_BLOCKS=$(/usr/bin/expr $F_ROOT_BLOCKS + $F_HOME_BLOCKS + 200000)
+
+dd if=/dev/zero bs=$F_BLOCK_SIZE count=$F_IMAGE_BLOCKS of=fimage.img
+/sbin/mkfs.exfat -F fimage.img
+
+F_IMAGE_MOUNT=$(mktemp -d -p $(pwd))
+mount -o loop fimage.img $F_IMAGE_MOUNT
+
+F_IMAGE_TARGET="${F_IMAGE_MOUNT}/${RELEASENAME}"
+mkdir -p "$F_IMAGE_TARGET"
+mv root.img.gz* "$F_IMAGE_TARGET"
+mv home.img.gz* "$F_IMAGE_TARGET"
+
+umount $F_IMAGE_MOUNT
+rmdir $F_IMAGE_MOUNT
+
+/sbin/e2fsck -f -y fimage.img
+/sbin/resize2fs -f -M fimage.img
+
+/usr/bin/img2simg fimage.img fimage.img001
+rm fimage.img
+
+echo "Create sailfish LVM image..."
+
 # We will add some (100M) extra to temp image.
 TEMPIMGSECTORS=$(/usr/bin/expr $ROOTSECTORS + $HOMESECTORS + 200000 )
 
