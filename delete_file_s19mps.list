@@ -1,5 +1,4 @@
 /boot/extracting-README.txt
-/boot/flashing-README.txt
 /usr/bin/droid/wait_for_keymaster
 /usr/lib/systemd/system/wait_for_keymaster.service
 /usr/lib/systemd/system/multi-user.target.wants/wait_for_keymaster.service
