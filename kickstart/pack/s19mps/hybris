@@ -80,7 +80,7 @@ F_BLOCK_SIZE=$(stat -c '%B' root.img.gz)
 F_IMAGE_BLOCKS=$(/usr/bin/expr $F_ROOT_BLOCKS + $F_HOME_BLOCKS + 200000)
 
 dd if=/dev/zero bs=$F_BLOCK_SIZE count=$F_IMAGE_BLOCKS of=fimage.img
-/sbin/mkfs.exfat -F fimage.img
+/sbin/mkfs.ext4 -F fimage.img
 
 F_IMAGE_MOUNT=$(mktemp -d -p $(pwd))
 mount -o loop fimage.img $F_IMAGE_MOUNT
@@ -137,7 +137,7 @@ mv temp.img sailfish.img
 /usr/bin/img2simg sailfish.img sailfish.img001
 rm sailfish.img
 
-FILES="*.img* *-release *.bin"
+FILES="*.img* *-release *.bin flash*"
 
 # Set supported devices in flash scripts
 if [ "@DEVICEMODEL@" = "xqcc54" ]; then
