@@ -57,3 +57,9 @@ service poweronlog /system_ext/bin/poweronlog.sh_HYBRIS_DISABLED
 service slogmodem /system_ext/bin/slogmodem_HYBRIS_DISABLED
 
 service nhmonitor /system_ext/bin/nhMonitorService_HYBRIS_DISABLED
+
+service ip_monitor /system_ext/bin/ip_monitor.sh_HYBRIS_DISABLED
+
+service remotedisplay /system/bin/remotedisplay_HYBRIS_DISABLED
+
+service credstore /system/bin/credstore_HYBRIS_DISABLED
