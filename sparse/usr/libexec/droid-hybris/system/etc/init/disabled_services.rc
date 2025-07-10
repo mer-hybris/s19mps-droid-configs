@@ -63,3 +63,5 @@ service ip_monitor /system_ext/bin/ip_monitor.sh_HYBRIS_DISABLED
 service remotedisplay /system/bin/remotedisplay_HYBRIS_DISABLED
 
 service credstore /system/bin/credstore_HYBRIS_DISABLED
+
+service ext_data /system_ext/bin/ext_data_HYBRIS_DISABLED
