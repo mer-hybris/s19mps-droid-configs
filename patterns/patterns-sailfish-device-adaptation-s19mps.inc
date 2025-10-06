@@ -2,7 +2,6 @@
 Summary: Jolla HW Adaptation s19mps
 Requires: droid-hal-s19mps
 Requires: droid-hal-s19mps-img-boot
-Requires: droid-hal-s19mps-img-recovery
 Requires: droid-hal-s19mps-kernel-dtbo
 Requires: droid-hal-s19mps-tools
 Requires: droid-hal-s19mps-vendor_boot
