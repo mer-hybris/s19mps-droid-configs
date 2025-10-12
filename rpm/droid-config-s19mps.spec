@@ -24,9 +24,6 @@ Obsoletes: ofono-alien-binder-plugin
 
 Obsoletes: bluez5-configs-mer
 
-# No device reset
-Provides: jolla-settings-system-reset
-
 # Device-specific usb-moded configuration
 Provides: usb-moded-configs
 Obsoletes: usb-moded-defaults
