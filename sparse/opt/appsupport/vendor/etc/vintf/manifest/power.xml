@@ -3,4 +3,9 @@
         <name>android.hardware.power</name>
         <transport>hwbinder</transport>
     </hal>
+    <hal format="aidl">
+        <name>android.hardware.power</name>
+        <version>2</version>
+    <fqname>IPower/default</fqname>
+    </hal>
 </manifest>
