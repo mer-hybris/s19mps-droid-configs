@@ -19,8 +19,6 @@ Conflicts: appsupport-system > 13.0.0
 Provides: ofono-configs
 Obsoletes: ofono-configs-mer
 Obsoletes: ofono-configs-binder
-Provides: ofono-alien-binder-plugin
-Obsoletes: ofono-alien-binder-plugin
 
 Obsoletes: bluez5-configs-mer
 
